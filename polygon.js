@@ -15,13 +15,18 @@ class poly{
         //NameSpacing(renaming width and height)
         this.width = width;
         this.height = height;
+        this.image= loadImage("sprites/polygon.png")    
         World.add(world, this.body);
     }
 
     display() {
+
+        
      //NameSpacing(renaming position of Ground)
         var pos = this.body.position;
-        strokeWeight(2);
+        imageMode(CENTER);
+        image(this.image, 0, 0, this.width, this.height);
+        //strokeWeight(2);
         fill("yellow");
         rect(pos.x, pos.y, this.width, this.height);
 
